@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slot Machine - Admin Panel (Batch Spin Grant)</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
+    <link rel="stylesheet" href="admin_styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Slot Machine - Admin: Grant Free Spins</h1>
+
+        <div id="connection-area">
+            <button id="connectWalletBtnAdmin">Connect Admin Wallet</button>
+            <p id="walletStatusAdmin">Status: Not Connected</p>
+            <p id="adminAuthStatus">Admin Auth: Not Verified</p>
+        </div>
+
+        <hr>
+
+        <div id="admin-panel" style="display: none;">
+            <h2>Batch Grant Free Spins</h2>
+            <p>Enter player addresses (one per line) and the number of spins (1-50) to grant to each.</p>
+            <p><strong>Note:</strong> The system will process these in batches of up to 5 addresses per transaction.</p>
+
+            <div>
+                <label for="playerAddressesTextarea">Player Addresses (one per line):</label><br>
+                <textarea id="playerAddressesTextarea" rows="15" cols="70" placeholder="0xAddress1...\n0xAddress2...\n0xAddress3... (up to 100 for this UI)"></textarea>
+            </div>
+
+            <div>
+                <label for="spinsPerPlayerInputAdmin">Spins per Player (1-50):</label>
+                <input type="number" id="spinsPerPlayerInputAdmin" value="5" min="1" max="50" style="width: 60px;">
+            </div>
+
+            <button id="grantBatchButton">Grant Spins to All Addresses</button>
+
+            <div id="batchProgressArea" style="margin-top: 20px;">
+                <h3>Progress & Log:</h3>
+                <div id="overallProgress"></div>
+                <ul id="transactionLogAdmin"></ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="loading-overlay" class="loading-overlay" style="display: none;">
+        <p id="loading-message">Processing...</p>
+    </div>
+
+    <script src="admin.js"></script> </body>
+</html>
