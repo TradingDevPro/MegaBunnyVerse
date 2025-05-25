@@ -101,9 +101,9 @@ text("🎰 WELCOME TO MEGA BUNNY VERSE 🎰", width / 2, 90);
 textSize(13); textAlign(CENTER, TOP);
 // 안내 문구에서 $tMONG을 $tMBV로 변경
 text(
-    "Earned game points are paid out as $tMBV tokens on the MegaETH testnet,\n" + // 변경
+    "Earned game points are paid out as $tCarrot tokens on the MegaETH testnet,\n" + // 변경
     "and they will be converted 1:1 into $MBV meme tokens issued on the future MegaETH mainnet.\n\n" + // 변경 (미래의 메인넷 토큰 이름도 MBV로 가정)
-    "Additionally, the top $tMBV holders will be eligible for a PFP NFT airdrop.", // 변경
+    "Additionally, the top $tCarrot holders will be eligible for a PFP NFT airdrop.", // 변경
     width / 2, 130
 );
 }

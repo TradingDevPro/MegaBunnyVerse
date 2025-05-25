@@ -215,7 +215,7 @@ function setup() {
     tmongInfoDiv = createDiv('').style('font-size', '10px').style('color', '#333').style('word-break', 'break-all').parent(tokenInfoBox);
 
     // Add Token 버튼 텍스트 변경
-    addTMongTokenLink = createA('javascript:void(0);', 'Add $tMBV to MetaMask') 
+    addTMongTokenLink = createA('javascript:void(0);', 'Add $tCarrot to MetaMask') 
         .style('font-size', '10px')
         .style('color', '#007bff')
         .style('text-decoration', 'underline')
@@ -235,7 +235,7 @@ function updateTokenInfoUI(balance, tokenCa) {
     if (tokenInfoBox) {
         if (tmongBalanceDiv) tmongBalanceDiv.html(`My Balance: ${balance !== null ? balance : 'Loading...'}`);
         // CA 정보 표시 시 토큰 심볼도 함께 표시 가능
-        if (tmongInfoDiv) tmongInfoDiv.html(`$tMBV CA: ${tokenCa || 'N/A'}`); 
+        if (tmongInfoDiv) tmongInfoDiv.html(`$tCarrot CA: ${tokenCa || 'N/A'}`); 
     }
 }
 
@@ -354,7 +354,7 @@ function setupButtons() {
         .hide();
 
     // Claim 버튼 레이블 변경
-    claimButton = createButton('💰 Claim $tMBV') 
+    claimButton = createButton('💰 Claim $tCarrot') 
         .size(CLAIM_W + 20, 40) // $tMBV가 길어서 너비 약간 증가
         .mousePressed(async () => {
             if (globalIsLoading) return;
